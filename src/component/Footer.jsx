@@ -4,7 +4,7 @@ export default function Footer(props) {
   return (
     <>
 
-      <div className="my-5 fixed-bottom">
+      <div className="my-5 fixed-bottom1">
         <footer className="text-center text-white" style={{"backgroundColor":"#f1f1f1"}}>
           <div className="container pt-4">
             <section className="mb-4">
