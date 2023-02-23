@@ -3,8 +3,8 @@ import Header from './component/Header';
 import Footer from './component/Footer';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import React from 'react';
-import EmployeeList from './component/empcrud/EmployeeHome';
 import EmployeeHome from './component/empcrud/EmployeeHome';
+import EmployeeList from './component/empcrud/EmployeeList';
 import EmployeeCreate from './component/empcrud/EmployeeCreate';
 import EmployeeDetail from './component/empcrud/EmployeeDetail';
 

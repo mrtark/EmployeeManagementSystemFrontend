@@ -10,7 +10,7 @@ export default function Footer(props) {
             <section className="mb-4">
               <a
                 className="btn btn-link btn-floating btn-lg text-dark m-1"
-                href="#!"
+                
                 role="button"
                 data-mdb-ripple-color="dark"
               ><i className={props.iconf}></i></a>
