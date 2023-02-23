@@ -12,14 +12,14 @@ function App() {
   return (
     <React.Fragment>
       <Router>
-        <Header />
+        <Header icon="fa-brands fa-gg-circle"/>
         <Switch>
           <Route path="/" exact component={EmployeeHome}></Route>
           <Route path="/employee-list" component={EmployeeList}></Route>
           <Route path="/employee-create/:id" component={EmployeeCreate}></Route>
           <Route path="/employee-detail/:id" component={EmployeeDetail}></Route>
         </Switch>
-        <Footer />
+        <Footer iconf="fab fa-github"/>
       </Router>
     </React.Fragment>
   );
