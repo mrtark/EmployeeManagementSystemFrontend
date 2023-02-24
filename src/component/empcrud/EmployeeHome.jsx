@@ -1,9 +1,10 @@
 import React from 'react'
 
-export default function EmployeeHome() {
+export default function EmployeeHome(props) {
+  
   return (
     <>
-    EmployeeHome
+    <button className='btn btn-dark'>EmployeeList</button>
     </>
   )
 }
