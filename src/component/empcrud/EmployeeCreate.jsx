@@ -16,10 +16,10 @@ export default class EmployeeCreate extends Component {
     }
     this.onChangeDepartment = this.onChangeDepartment.bind(this);
     this.onChangeGender = this.onChangeGender.bind(this);
-    this.onChangeUsername=this.onChangeUsername.bind(this);
-    this.onChangeSurname=this.onChangeSurname.bind(this);
-    this.onChangeTelephone=this.onChangeTelephone.bind(this);
-    this.onChangeEmail=this.onChangeEmail.bind(this);
+    this.onChangeUsername = this.onChangeUsername.bind(this);
+    this.onChangeSurname = this.onChangeSurname.bind(this);
+    this.onChangeTelephone = this.onChangeTelephone.bind(this);
+    this.onChangeEmail = this.onChangeEmail.bind(this);
   }
 
   componentDidMount() {
@@ -57,18 +57,55 @@ export default class EmployeeCreate extends Component {
   onChangeGender() {
 
   }
-  onChangeUsername(){
+  onChangeUsername() {
 
   }
-  onChangeSurname(){
+  onChangeSurname() {
 
   }
-  onChangeTelephone(){
+  onChangeTelephone() {
 
   }
-  onChangeEmail(){
+  onChangeEmail() {
 
   }
+  createOrUpdate(event) {
+    event.preventDefault();
+
+    const eDto = {
+      department: this.state.department,
+      gender: this.state.gender,
+      username: this.state.username,
+      surname: this.state.surname,
+      telephoneNumber: this.state.telephoneNumber,
+      emailAdress: this.state.emailAdress,
+    }
+
+    if (this.state.id === "/employee-create") {
+      EmployeeService.employeeCreateApi(eDto).then(
+        response => {
+          if (response.status === 200) {
+            this.props.history.push("/employee-list")
+          }
+        }
+      ).catch(error => {
+        console.log("Create Eror Note: " + error.response.data)
+      }
+      )
+    } else {
+      EmployeeService.employeeUpdateApi(this.state.id, eDto).then(
+        response => {
+          if (response.status === 200) {
+            this.props.history.push("/employee-list")
+          }
+        }
+      ).catch(error => {
+        console.log("Update Error Note: " + error.response.data)
+      })
+    }
+  }
+
+
 
   render() {
     return (
@@ -131,6 +168,10 @@ export default class EmployeeCreate extends Component {
                 </div>
               </div>
             </div>
+          </div>
+          <div className="card-footer text-center">
+            <input type="submit" className="shadow btn btn-outline-success w-25"
+              onClick={this.createOrUpdate} value="Kaydet" />
           </div>
         </div>
 

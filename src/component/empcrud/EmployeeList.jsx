@@ -69,7 +69,7 @@ export default class EmployeeList extends Component {
                         <h4 className='mt-2'>Employee List</h4>
                         <div className="card-body">
                           <div className="table-responsive">
-                            <table className="table table-secondary  mb-0 -4">
+                            <table className="table table-secondary table-hover mb-0 -4">
                               <thead>
                                 <tr>
                                   <th scope="col">ID</th>

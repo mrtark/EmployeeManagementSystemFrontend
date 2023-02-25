@@ -22,7 +22,7 @@ export default class EmployeeDetail extends Component {
   render() {
     return (
       <>
-        <div className="card mt-2 w-75 shadow border-primary">
+        <div className="card mt-5 ms-5 w-50 shadow border-primary">
           <div className='card-header text-primary'>Employee ID: {this.state.employeeDto.id}</div>      
             <div className="card-body">
               <p className="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum dolor saepe velit quod ad, unde soluta nihil nulla consequatur nostrum?</p>
