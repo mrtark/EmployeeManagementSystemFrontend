@@ -14,6 +14,12 @@ export default class EmployeeCreate extends Component {
       telephoneNumber: "",
       emailAdress: "",
     }
+    this.onChangeDepartment = this.onChangeDepartment.bind(this);
+    this.onChangeGender = this.onChangeGender.bind(this);
+    this.onChangeUsername=this.onChangeUsername.bind(this);
+    this.onChangeSurname=this.onChangeSurname.bind(this);
+    this.onChangeTelephone=this.onChangeTelephone.bind(this);
+    this.onChangeEmail=this.onChangeEmail.bind(this);
   }
 
   componentDidMount() {
@@ -31,7 +37,6 @@ export default class EmployeeCreate extends Component {
             surname: employeeDto.surname,
             telephoneNumber: employeeDto.telephoneNumber,
             emailAdress: employeeDto.emailAdress,
-            department: employeeDto
           })
         }
       )
@@ -46,10 +51,89 @@ export default class EmployeeCreate extends Component {
     }
   }
 
+  onChangeDepartment() {
+
+  }
+  onChangeGender() {
+
+  }
+  onChangeUsername(){
+
+  }
+  onChangeSurname(){
+
+  }
+  onChangeTelephone(){
+
+  }
+  onChangeEmail(){
+
+  }
+
   render() {
     return (
       <>
         {this.dynamicHeaderCU()}
+        <div className="card w-50 center shadow">
+          <div className="card-body">
+            <h1 className='text-center fs-4'>Update</h1>
+            <div className="row m-2">
+              <div className="col">
+                <div className="input-group mb-3">
+                  <span htmlFor="department" className="input-group-text" id="basic-addon1">Department</span>
+                  <input type="text" className="form-control" id="department" name="department"
+                    onChange={this.onChangeDepartment} value={this.state.department} />
+                </div>
+              </div>
+            </div>
+            <div className="row m-2">
+              <div className="col">
+                <div className="input-group mb-3">
+                  <span htmlFor="gender" className="input-group-text" id="basic-addon1">Gender</span>
+                  <input type="text" className="form-control" id="gender" name="gender"
+                    onChange={this.onChangeGender} value={this.state.gender} />
+                </div>
+              </div>
+            </div>
+            <div className="row m-2">
+              <div className="col">
+                <div className="input-group mb-3">
+                  <span htmlFor="username" className="input-group-text" id="basic-addon1">Username</span>
+                  <input type="text" className="form-control" id="username" name="username"
+                    onChange={this.onChangeUsername} value={this.state.username} />
+                </div>
+              </div>
+            </div>
+            <div className="row m-2">
+              <div className="col">
+                <div className="input-group mb-3">
+                  <span htmlFor="surname" className="input-group-text" id="basic-addon1">Surname</span>
+                  <input type="text" className="form-control" id="surname" name="surname"
+                    onChange={this.onChangeSurname} value={this.state.surname} />
+                </div>
+              </div>
+            </div>
+            <div className="row m-2">
+              <div className="col">
+                <div className="input-group mb-3">
+                  <span htmlFor="telephoneNumber" className="input-group-text" id="basic-addon1">Telephone</span>
+                  <input type="text" className="form-control" id="telephoneNumber" name="telephoneNumber"
+                    onChange={this.onChangeTelephone} value={this.state.telephoneNumber} />
+                </div>
+              </div>
+            </div>
+            <div className="row m-2">
+              <div className="col">
+                <div className="input-group mb-3">
+                  <span htmlFor="emailAdress" className="input-group-text" id="basic-addon1">E-mail</span>
+                  <input type="text" className="form-control" id="emailAdress" name="emailAdress"
+                    onChange={this.onChangeEmail} value={this.state.emailAdress} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </>
     )
   }
